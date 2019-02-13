@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+var firstname=window.document.form1.firstname.value;
+var lastname=window.document.form1.lastname.value;
+var regno=window.document.form1.regno.value;
+var phone no=window.document.form1.phone no.value;
+var birthdate=window.document.form1.birthdate.value;
+var address=window.document.form1.address.value;
+check=newRegExp("[^a-zA-Z","g");
+if(firstname=="")
+{
+alert("name must be filled");
+return false;
+}
+return true;
+}
+</script></head>
+<body bgcolor="powerblue">
+<center><h1>STUDENT REGISTRATION</h1></center>
+<form name="form1" onSubmit="return validate();">
+<label>firstname:</label><form>
+<input type="text" name="firstname"/><br><br>
+<form>
+lastname:</form><form>
+<input type="text"/><br><br>
+<form>
+regno:</form><form>
+<input type="text"/><br><br>
+<form>
+phone no:</form><form>
+<input type="number"/><br><br>
+birthdate:<form>
+<input type="date" name="birthdate"></form>
+address:<form><textarea rows="5" cols="50" name="description"></textarea></form>
+<br><center>
+<input type="submit"  value="submit"/>
+<input type="reset" name="reset" value="reset"/>
+</form></body>
+</html>

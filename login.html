@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+var loginid=window.document.form1.loginid.value;
+var password=window.document.form1.pwd.value;
+check=new RegExp("[^a-zA-Z]","g");
+if(loginid=="")
+{
+alert("name must fill");
+return false;
+}
+if(loginid.match(check))
+ {
+alert("name should contain alphabet");
+return false;
+}
+if(loginid.length<6)
+ {
+alert("name shoul contain atleast 6 chars");
+return false;
+}
+return true;
+}
+</script></head>
+<body bgcolor="skyblue">
+<h1><center><b>STUDENT LOGIN</h1>
+<form name="form1" onSubmit="return validate();">
+<center>
+<label>Username:</label>
+<input type="text" name="loginid" placeholder="username"><br/>
+<label>password:</label>
+<input type="password" name="pwd" placeholder="password"><br/>
+<input type="submit" value="login">
+</body></html>
